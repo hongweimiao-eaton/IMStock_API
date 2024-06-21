@@ -1,0 +1,44 @@
+namespace db.models;
+
+using "db.models::IMStockBatchLoc" as MCHB_MARD;
+using "db.models::IMStockMaterial" as MARA;
+using "db.models::IMStockWBS" as PRPS;
+using "db.models::IMStockMaterialDoc" as MAKT;
+
+context IMStock {
+    define view IMStockView as
+        select from MCHB_MARD as D
+        left join   MARA as A      on
+            D.MATNR = A.MATNR
+        left join   PRPS as P      on
+            D.PSPNR = P.OBJNR
+        left join   MAKT as T      on
+            D.MATNR = T.MATNR
+        {
+            key "D"."MATNR"  as "Matnr",
+            key "D"."WERKS"  as "Werks",
+            key "D"."LGORT"  as "Lgort",
+            key "D"."CHARG"  as "Charg",
+            key "D"."SOBKZ"  as "Sobkz",
+            key "D"."SONUM"  as "Sonum",
+                case
+                    when "D"."SOBKZ" = 'Q' then "P"."POSID"
+                    when "D"."SOBKZ" = 'E' then "D"."SONUM"
+                    else                        ltrim("D"."SONUM", '0')
+                end          as "Sonumx",
+                "D"."MENGEU" as "Mengeu",
+                "D"."MENGEQ" as "Mengeq",
+                "D"."MENGER" as "Menger",
+                "D"."MENGES" as "Menges",
+                "A"."MEINS"  as "Meins",
+                "D"."SPERR"  as "Sperr",
+                "D"."SPERC"  as "Sperc",
+                "D"."PSPNR"  as "Pspnr",
+                "D"."KASPR"  as "Kaspr",
+                "D"."SPERS"  as "Spers",
+                "P"."POSID"  as "Posid",
+                "T"."MAKTX"  as "Maktx"
+        }
+        where
+            "D"."DELETEFLAG" = 'NO';
+};

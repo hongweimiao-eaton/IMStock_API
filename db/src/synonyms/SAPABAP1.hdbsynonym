@@ -1,0 +1,50 @@
+{
+  "HANA_APP.db.synonyms::MARA": {
+    "target": {
+      "object": "/BIC/AZMM_AD242",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::MARD": {
+    "target": {
+      "object": "/BIC/AZMM_AD442",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::MCHB": {
+    "target": {
+      "object": "/BIC/AZMM_AD502",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::MSKA": {
+    "target": {
+      "object": "/BIC/AZMM_AD482",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::MKOL": {
+    "target": {
+      "object": "/BIC/AZMM_AD452",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::MSPR": {
+    "target": {
+      "object": "/BIC/AZMM_AD492",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::MAKT": {
+    "target": {
+      "object": "/BIC/AZMD_AD272",
+      "schema": "SAPABAP1"
+    }
+  },
+  "HANA_APP.db.synonyms::PRPS": {
+    "target": {
+      "object": "/BIC/AZPS_AD012",
+      "schema": "SAPABAP1"
+    }
+  }
+}

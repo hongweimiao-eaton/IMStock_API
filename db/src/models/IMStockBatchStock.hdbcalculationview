@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="db.models::IMStockBatchStock" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="IMStockBatchStock"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HANA_APP.db.synonyms::MCHB">
+    <resourceUri>HANA_APP.db.synonyms::MCHB</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="HANA_APP.db.synonyms::MCHB">
+  <attributes>
+    <attribute id="MATNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="MCHB" columnName="MATNR"/>
+    </attribute>
+    <attribute id="WERKS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WERKS"/>
+      <keyMapping columnObjectName="MCHB" columnName="WERKS"/>
+    </attribute>
+    <attribute id="LGORT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LGORT"/>
+      <keyMapping columnObjectName="MCHB" columnName="LGORT"/>
+    </attribute>
+    <attribute id="CHARG" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHARG"/>
+      <keyMapping columnObjectName="MCHB" columnName="CHARG"/>
+    </attribute>
+    <attribute id="LVORM" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LVORM"/>
+      <keyMapping columnObjectName="MCHB" columnName="LVORM"/>
+    </attribute>
+    <attribute id="ERSDA" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERSDA"/>
+      <keyMapping columnObjectName="MCHB" columnName="ERSDA"/>
+    </attribute>
+    <attribute id="ERNAM" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERNAM"/>
+      <keyMapping columnObjectName="MCHB" columnName="ERNAM"/>
+    </attribute>
+    <attribute id="LAEDA" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LAEDA"/>
+      <keyMapping columnObjectName="MCHB" columnName="LAEDA"/>
+    </attribute>
+    <attribute id="AENAM" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AENAM"/>
+      <keyMapping columnObjectName="MCHB" columnName="AENAM"/>
+    </attribute>
+    <attribute id="LFGJA" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFGJA"/>
+      <keyMapping columnObjectName="MCHB" columnName="LFGJA"/>
+    </attribute>
+    <attribute id="LFMON" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFMON"/>
+      <keyMapping columnObjectName="MCHB" columnName="LFMON"/>
+    </attribute>
+    <attribute id="SPERC" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPERC"/>
+      <keyMapping columnObjectName="MCHB" columnName="SPERC"/>
+    </attribute>
+    <attribute id="CLABS" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLABS"/>
+      <keyMapping columnObjectName="MCHB" columnName="CLABS"/>
+    </attribute>
+    <attribute id="CUMLM" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUMLM"/>
+      <keyMapping columnObjectName="MCHB" columnName="CUMLM"/>
+    </attribute>
+    <attribute id="CINSM" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CINSM"/>
+      <keyMapping columnObjectName="MCHB" columnName="CINSM"/>
+    </attribute>
+    <attribute id="CEINM" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CEINM"/>
+      <keyMapping columnObjectName="MCHB" columnName="CEINM"/>
+    </attribute>
+    <attribute id="CSPEM" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSPEM"/>
+      <keyMapping columnObjectName="MCHB" columnName="CSPEM"/>
+    </attribute>
+    <attribute id="CRETM" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CRETM"/>
+      <keyMapping columnObjectName="MCHB" columnName="CRETM"/>
+    </attribute>
+    <attribute id="CVMLA" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CVMLA"/>
+      <keyMapping columnObjectName="MCHB" columnName="CVMLA"/>
+    </attribute>
+    <attribute id="CVMUM" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CVMUM"/>
+      <keyMapping columnObjectName="MCHB" columnName="CVMUM"/>
+    </attribute>
+    <attribute id="CVMIN" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CVMIN"/>
+      <keyMapping columnObjectName="MCHB" columnName="CVMIN"/>
+    </attribute>
+    <attribute id="CVMEI" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CVMEI"/>
+      <keyMapping columnObjectName="MCHB" columnName="CVMEI"/>
+    </attribute>
+    <attribute id="CVMSP" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CVMSP"/>
+      <keyMapping columnObjectName="MCHB" columnName="CVMSP"/>
+    </attribute>
+    <attribute id="CVMRE" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CVMRE"/>
+      <keyMapping columnObjectName="MCHB" columnName="CVMRE"/>
+    </attribute>
+    <attribute id="KZICL" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZICL"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZICL"/>
+    </attribute>
+    <attribute id="KZICQ" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZICQ"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZICQ"/>
+    </attribute>
+    <attribute id="KZICE" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZICE"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZICE"/>
+    </attribute>
+    <attribute id="KZICS" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZICS"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZICS"/>
+    </attribute>
+    <attribute id="KZVCL" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZVCL"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZVCL"/>
+    </attribute>
+    <attribute id="KZVCQ" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZVCQ"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZVCQ"/>
+    </attribute>
+    <attribute id="KZVCE" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZVCE"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZVCE"/>
+    </attribute>
+    <attribute id="KZVCS" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZVCS"/>
+      <keyMapping columnObjectName="MCHB" columnName="KZVCS"/>
+    </attribute>
+    <attribute id="HERKL" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HERKL"/>
+      <keyMapping columnObjectName="MCHB" columnName="HERKL"/>
+    </attribute>
+    <attribute id="CHDLL" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHDLL"/>
+      <keyMapping columnObjectName="MCHB" columnName="CHDLL"/>
+    </attribute>
+    <attribute id="CHJIN" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHJIN"/>
+      <keyMapping columnObjectName="MCHB" columnName="CHJIN"/>
+    </attribute>
+    <attribute id="CHRUE" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHRUE"/>
+      <keyMapping columnObjectName="MCHB" columnName="CHRUE"/>
+    </attribute>
+    <attribute id="SGT_SCAT" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SGT_SCAT"/>
+      <keyMapping columnObjectName="MCHB" columnName="SGT_SCAT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

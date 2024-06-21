@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="db.models::IMStockMaterial" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="IMStockMaterial"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HANA_APP.db.synonyms::MARA">
+    <resourceUri>HANA_APP.db.synonyms::MARA</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="HANA_APP.db.synonyms::MARA">
+  <attributes>
+    <attribute id="MATNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATERIAL"/>
+      <keyMapping columnObjectName="MARA" columnName="MATERIAL"/>
+    </attribute>
+    <attribute id="MEINS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MEINS"/>
+      <keyMapping columnObjectName="MARA" columnName="MEINS"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

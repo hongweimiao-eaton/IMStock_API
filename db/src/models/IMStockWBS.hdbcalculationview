@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="db.models::IMStockWBS" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="IMStockWBS"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HANA_APP.db.synonyms::PRPS">
+    <resourceUri>HANA_APP.db.synonyms::PRPS</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="HANA_APP.db.synonyms::PRPS">
+  <attributes>
+    <attribute id="PSPNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PSPNR"/>
+      <keyMapping columnObjectName="PRPS" columnName="PSPNR"/>
+    </attribute>
+    <attribute id="POSID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSID"/>
+      <keyMapping columnObjectName="PRPS" columnName="POSID"/>
+    </attribute>
+    <attribute id="OBJNR_1" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJNR_1"/>
+      <keyMapping columnObjectName="PRPS" columnName="OBJNR"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="OBJNR" order="3" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="8">
+        <formula>rightstr(&quot;OBJNR_1&quot;, 8)</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

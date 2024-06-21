@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="db.models::IMStockMtoStock" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="IMStockMtoStock"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HANA_APP.db.synonyms::MSKA">
+    <resourceUri>HANA_APP.db.synonyms::MSKA</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="HANA_APP.db.synonyms::MSKA">
+  <attributes>
+    <attribute id="MATNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="MSKA" columnName="MATNR"/>
+    </attribute>
+    <attribute id="WERKS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WERKS"/>
+      <keyMapping columnObjectName="MSKA" columnName="WERKS"/>
+    </attribute>
+    <attribute id="LGORT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LGORT"/>
+      <keyMapping columnObjectName="MSKA" columnName="LGORT"/>
+    </attribute>
+    <attribute id="CHARG" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHARG"/>
+      <keyMapping columnObjectName="MSKA" columnName="CHARG"/>
+    </attribute>
+    <attribute id="SOBKZ" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOBKZ"/>
+      <keyMapping columnObjectName="MSKA" columnName="SOBKZ"/>
+    </attribute>
+    <attribute id="VBELN" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELN"/>
+      <keyMapping columnObjectName="MSKA" columnName="VBELN"/>
+    </attribute>
+    <attribute id="POSNR" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSNR"/>
+      <keyMapping columnObjectName="MSKA" columnName="POSNR"/>
+    </attribute>
+    <attribute id="LFGJA" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFGJA"/>
+      <keyMapping columnObjectName="MSKA" columnName="LFGJA"/>
+    </attribute>
+    <attribute id="LFMON" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFMON"/>
+      <keyMapping columnObjectName="MSKA" columnName="LFMON"/>
+    </attribute>
+    <attribute id="KASPR" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KASPR"/>
+      <keyMapping columnObjectName="MSKA" columnName="KASPR"/>
+    </attribute>
+    <attribute id="KALAB" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KALAB"/>
+      <keyMapping columnObjectName="MSKA" columnName="KALAB"/>
+    </attribute>
+    <attribute id="KAINS" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAINS"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAINS"/>
+    </attribute>
+    <attribute id="KASPE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KASPE"/>
+      <keyMapping columnObjectName="MSKA" columnName="KASPE"/>
+    </attribute>
+    <attribute id="KAVLA" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVLA"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVLA"/>
+    </attribute>
+    <attribute id="KAVIN" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVIN"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVIN"/>
+    </attribute>
+    <attribute id="KAVSP" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVSP"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVSP"/>
+    </attribute>
+    <attribute id="KAILL" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAILL"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAILL"/>
+    </attribute>
+    <attribute id="KAILQ" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAILQ"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAILQ"/>
+    </attribute>
+    <attribute id="KAILS" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAILS"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAILS"/>
+    </attribute>
+    <attribute id="KAVLL" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVLL"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVLL"/>
+    </attribute>
+    <attribute id="KAVLQ" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVLQ"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVLQ"/>
+    </attribute>
+    <attribute id="KAVLS" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVLS"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVLS"/>
+    </attribute>
+    <attribute id="KAFLL" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAFLL"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAFLL"/>
+    </attribute>
+    <attribute id="KAFLQ" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAFLQ"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAFLQ"/>
+    </attribute>
+    <attribute id="KAFLS" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAFLS"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAFLS"/>
+    </attribute>
+    <attribute id="KADLL" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KADLL"/>
+      <keyMapping columnObjectName="MSKA" columnName="KADLL"/>
+    </attribute>
+    <attribute id="KAEIN" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAEIN"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAEIN"/>
+    </attribute>
+    <attribute id="KAVEI" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAVEI"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAVEI"/>
+    </attribute>
+    <attribute id="ERSDA" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERSDA"/>
+      <keyMapping columnObjectName="MSKA" columnName="ERSDA"/>
+    </attribute>
+    <attribute id="KAJIN" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAJIN"/>
+      <keyMapping columnObjectName="MSKA" columnName="KAJIN"/>
+    </attribute>
+    <attribute id="KARUE" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KARUE"/>
+      <keyMapping columnObjectName="MSKA" columnName="KARUE"/>
+    </attribute>
+    <attribute id="SGT_SCAT" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SGT_SCAT"/>
+      <keyMapping columnObjectName="MSKA" columnName="SGT_SCAT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario> 

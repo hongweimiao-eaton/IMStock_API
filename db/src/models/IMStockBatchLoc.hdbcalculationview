@@ -1,0 +1,1694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="db.models::IMStockBatchLoc" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="IMStockBatchLoc"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HANA_APP.db.synonyms::MCHB">
+    <resourceUri>HANA_APP.db.synonyms::MCHB</resourceUri>
+  </DataSource>
+  <DataSource id="HANA_APP.db.synonyms::MARD">
+    <resourceUri>HANA_APP.db.synonyms::MARD</resourceUri>
+  </DataSource>
+  <DataSource id="HANA_APP.db.synonyms::MSKA">
+    <resourceUri>HANA_APP.db.synonyms::MSKA</resourceUri>
+  </DataSource>
+  <DataSource id="HANA_APP.db.synonyms::MKOL">
+    <resourceUri>HANA_APP.db.synonyms::MKOL</resourceUri>
+  </DataSource>
+  <DataSource id="HANA_APP.db.synonyms::MSPR">
+    <resourceUri>HANA_APP.db.synonyms::MSPR</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="LAEDA"/>
+      <viewAttribute id="AENAM"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="SPERC"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="CUMLM"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="CEINM"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="MENGER"/>
+      <viewAttribute id="CVMLA"/>
+      <viewAttribute id="CVMUM"/>
+      <viewAttribute id="CVMIN"/>
+      <viewAttribute id="CVMEI"/>
+      <viewAttribute id="CVMSP"/>
+      <viewAttribute id="CVMRE"/>
+      <viewAttribute id="KZICL"/>
+      <viewAttribute id="KZICQ"/>
+      <viewAttribute id="KZICE"/>
+      <viewAttribute id="KZICS"/>
+      <viewAttribute id="KZVCL"/>
+      <viewAttribute id="KZVCQ"/>
+      <viewAttribute id="KZVCE"/>
+      <viewAttribute id="KZVCS"/>
+      <viewAttribute id="HERKL"/>
+      <viewAttribute id="CHDLL"/>
+      <viewAttribute id="CHJIN"/>
+      <viewAttribute id="CHRUE"/>
+      <viewAttribute id="SGT_SCAT"/>
+      <viewAttribute id="PSTAT"/>
+      <viewAttribute id="SPERR"/>
+      <viewAttribute id="UMLME"/>
+      <viewAttribute id="EINME"/>
+      <viewAttribute id="VMLAB"/>
+      <viewAttribute id="VMUML"/>
+      <viewAttribute id="VMINS"/>
+      <viewAttribute id="VMEIN"/>
+      <viewAttribute id="VMSPE"/>
+      <viewAttribute id="VMRET"/>
+      <viewAttribute id="KZILL"/>
+      <viewAttribute id="KZILQ"/>
+      <viewAttribute id="KZILE"/>
+      <viewAttribute id="KZILS"/>
+      <viewAttribute id="KZVLL"/>
+      <viewAttribute id="KZVLQ"/>
+      <viewAttribute id="KZVLE"/>
+      <viewAttribute id="KZVLS"/>
+      <viewAttribute id="DISKZ"/>
+      <viewAttribute id="LSOBS"/>
+      <viewAttribute id="LMINB"/>
+      <viewAttribute id="LBSTF"/>
+      <viewAttribute id="EXPPG"/>
+      <viewAttribute id="EXVER"/>
+      <viewAttribute id="LGPBE"/>
+      <viewAttribute id="KLABS"/>
+      <viewAttribute id="KINSM"/>
+      <viewAttribute id="KEINM"/>
+      <viewAttribute id="KSPEM"/>
+      <viewAttribute id="DLINL"/>
+      <viewAttribute id="PRCTL"/>
+      <viewAttribute id="VKLAB"/>
+      <viewAttribute id="VKUML"/>
+      <viewAttribute id="LWMKB"/>
+      <viewAttribute id="BSKRF"/>
+      <viewAttribute id="MDRUE"/>
+      <viewAttribute id="MDJIN"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_2" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LVORM" source="LVORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAEDA" source="LAEDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AENAM" source="AENAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERC" source="SPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUMLM" source="CUMLM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CEINM" source="CEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="MENGES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="MENGER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMLA" source="CVMLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMUM" source="CVMUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMIN" source="CVMIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMEI" source="CVMEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMSP" source="CVMSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMRE" source="CVMRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICL" source="KZICL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICQ" source="KZICQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICE" source="KZICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICS" source="KZICS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCL" source="KZVCL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCQ" source="KZVCQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCE" source="KZVCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCS" source="KZVCS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HERKL" source="HERKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHDLL" source="CHDLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHJIN" source="CHJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHRUE" source="CHRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SGT_SCAT" source="SGT_SCAT"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSTAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="UMLME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EINME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMINS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMSPE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMRET" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DISKZ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LSOBS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LMINB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LBSTF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXPPG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXVER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LGPBE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KLABS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KINSM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KSPEM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DLINL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRCTL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LWMKB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSKRF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDJIN" null="true" value=""/>
+    </input>
+    <input node="Projection_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHARG" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LVORM" source="LVORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERNAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LAEDA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AENAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERC" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CUMLM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="MENGES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="MENGER"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMUM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMRE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCS" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HERKL" source="HERKL"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHDLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SGT_SCAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSTAT" source="PSTAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMLME" source="UMLME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EINME" source="EINME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMLAB" source="VMLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMUML" source="VMUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMINS" source="VMINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMEIN" source="VMEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMSPE" source="VMSPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMRET" source="VMRET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILL" source="KZILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILQ" source="KZILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILE" source="KZILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILS" source="KZILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLL" source="KZVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLQ" source="KZVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLE" source="KZVLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLS" source="KZVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISKZ" source="DISKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSOBS" source="LSOBS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LMINB" source="LMINB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LBSTF" source="LBSTF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXPPG" source="EXPPG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXVER" source="EXVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KLABS" source="KLABS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KINSM" source="KINSM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KEINM" source="KEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KSPEM" source="KSPEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DLINL" source="DLINL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRCTL" source="PRCTL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKLAB" source="VKLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKUML" source="VKUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LWMKB" source="LWMKB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BSKRF" source="BSKRF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDRUE" source="MDRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDJIN" source="MDJIN"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="LAEDA"/>
+      <viewAttribute id="AENAM"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="SPERC"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="CUMLM"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="CEINM"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="MENGER"/>
+      <viewAttribute id="CVMLA"/>
+      <viewAttribute id="CVMUM"/>
+      <viewAttribute id="CVMIN"/>
+      <viewAttribute id="CVMEI"/>
+      <viewAttribute id="CVMSP"/>
+      <viewAttribute id="CVMRE"/>
+      <viewAttribute id="KZICL"/>
+      <viewAttribute id="KZICQ"/>
+      <viewAttribute id="KZICE"/>
+      <viewAttribute id="KZICS"/>
+      <viewAttribute id="KZVCL"/>
+      <viewAttribute id="KZVCQ"/>
+      <viewAttribute id="KZVCE"/>
+      <viewAttribute id="KZVCS"/>
+      <viewAttribute id="HERKL"/>
+      <viewAttribute id="CHDLL"/>
+      <viewAttribute id="CHJIN"/>
+      <viewAttribute id="CHRUE"/>
+      <viewAttribute id="SGT_SCAT"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="HANA_APP.db.synonyms::MCHB">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="CLABS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="CINSM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="CSPEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="CRETM"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+    
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="MENGER"/>
+      <viewAttribute id="HERKL"/>
+      <viewAttribute id="PSTAT"/>
+      <viewAttribute id="SPERR"/>
+      <viewAttribute id="UMLME"/>
+      <viewAttribute id="EINME"/>
+      <viewAttribute id="VMLAB"/>
+      <viewAttribute id="VMUML"/>
+      <viewAttribute id="VMINS"/>
+      <viewAttribute id="VMEIN"/>
+      <viewAttribute id="VMSPE"/>
+      <viewAttribute id="VMRET"/>
+      <viewAttribute id="KZILL"/>
+      <viewAttribute id="KZILQ"/>
+      <viewAttribute id="KZILE"/>
+      <viewAttribute id="KZILS"/>
+      <viewAttribute id="KZVLL"/>
+      <viewAttribute id="KZVLQ"/>
+      <viewAttribute id="KZVLE"/>
+      <viewAttribute id="KZVLS"/>
+      <viewAttribute id="DISKZ"/>
+      <viewAttribute id="LSOBS"/>
+      <viewAttribute id="LMINB"/>
+      <viewAttribute id="LBSTF"/>
+      <viewAttribute id="EXPPG"/>
+      <viewAttribute id="EXVER"/>
+      <viewAttribute id="LGPBE"/>
+      <viewAttribute id="KLABS"/>
+      <viewAttribute id="KINSM"/>
+      <viewAttribute id="KEINM"/>
+      <viewAttribute id="KSPEM"/>
+      <viewAttribute id="DLINL"/>
+      <viewAttribute id="PRCTL"/>
+      <viewAttribute id="VKLAB"/>
+      <viewAttribute id="VKUML"/>
+      <viewAttribute id="LWMKB"/>
+      <viewAttribute id="BSKRF"/>
+      <viewAttribute id="MDRUE"/>
+      <viewAttribute id="MDJIN"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="HANA_APP.db.synonyms::MARD">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="LABST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="INSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="SPEME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="RETME"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="KASPR"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="KAVLA"/>
+      <viewAttribute id="KAVIN"/>
+      <viewAttribute id="KAVSP"/>
+      <viewAttribute id="KAILL"/>
+      <viewAttribute id="KAILQ"/>
+      <viewAttribute id="KAILS"/>
+      <viewAttribute id="KAVLL"/>
+      <viewAttribute id="KAVLQ"/>
+      <viewAttribute id="KAVLS"/>
+      <viewAttribute id="KAFLL"/>
+      <viewAttribute id="KAFLQ"/>
+      <viewAttribute id="KAFLS"/>
+      <viewAttribute id="KADLL"/>
+      <viewAttribute id="KAEIN"/>
+      <viewAttribute id="KAVEI"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="KAJIN"/>
+      <viewAttribute id="KARUE"/>
+      <viewAttribute id="SGT_SCAT"/>
+    
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="POSNR"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="SONUM" datatype="NVARCHAR" length="16" expressionLanguage="SQL">
+        <formula>CONCAT(&quot;VBELN&quot;, &quot;POSNR&quot;)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="HANA_APP.db.synonyms::MSKA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="KALAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="KAINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="KASPE"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_2">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="LAEDA"/>
+      <viewAttribute id="AENAM"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="SPERC"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="CUMLM"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="CEINM"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="MENGER"/>
+      <viewAttribute id="CVMLA"/>
+      <viewAttribute id="CVMUM"/>
+      <viewAttribute id="CVMIN"/>
+      <viewAttribute id="CVMEI"/>
+      <viewAttribute id="CVMSP"/>
+      <viewAttribute id="CVMRE"/>
+      <viewAttribute id="KZICL"/>
+      <viewAttribute id="KZICQ"/>
+      <viewAttribute id="KZICE"/>
+      <viewAttribute id="KZICS"/>
+      <viewAttribute id="KZVCL"/>
+      <viewAttribute id="KZVCQ"/>
+      <viewAttribute id="KZVCE"/>
+      <viewAttribute id="KZVCS"/>
+      <viewAttribute id="HERKL"/>
+      <viewAttribute id="CHDLL"/>
+      <viewAttribute id="CHJIN"/>
+      <viewAttribute id="CHRUE"/>
+      <viewAttribute id="SGT_SCAT"/>
+      <viewAttribute id="PSTAT"/>
+      <viewAttribute id="SPERR"/>
+      <viewAttribute id="UMLME"/>
+      <viewAttribute id="EINME"/>
+      <viewAttribute id="VMLAB"/>
+      <viewAttribute id="VMUML"/>
+      <viewAttribute id="VMINS"/>
+      <viewAttribute id="VMEIN"/>
+      <viewAttribute id="VMSPE"/>
+      <viewAttribute id="VMRET"/>
+      <viewAttribute id="KZILL"/>
+      <viewAttribute id="KZILQ"/>
+      <viewAttribute id="KZILE"/>
+      <viewAttribute id="KZILS"/>
+      <viewAttribute id="KZVLL"/>
+      <viewAttribute id="KZVLQ"/>
+      <viewAttribute id="KZVLE"/>
+      <viewAttribute id="KZVLS"/>
+      <viewAttribute id="DISKZ"/>
+      <viewAttribute id="LSOBS"/>
+      <viewAttribute id="LMINB"/>
+      <viewAttribute id="LBSTF"/>
+      <viewAttribute id="EXPPG"/>
+      <viewAttribute id="EXVER"/>
+      <viewAttribute id="LGPBE"/>
+      <viewAttribute id="KLABS"/>
+      <viewAttribute id="KINSM"/>
+      <viewAttribute id="KEINM"/>
+      <viewAttribute id="KSPEM"/>
+      <viewAttribute id="DLINL"/>
+      <viewAttribute id="PRCTL"/>
+      <viewAttribute id="VKLAB"/>
+      <viewAttribute id="VKUML"/>
+      <viewAttribute id="LWMKB"/>
+      <viewAttribute id="BSKRF"/>
+      <viewAttribute id="MDRUE"/>
+      <viewAttribute id="MDJIN"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="KASPR"/>
+      <viewAttribute id="KAVLA"/>
+      <viewAttribute id="KAVIN"/>
+      <viewAttribute id="KAVSP"/>
+      <viewAttribute id="KAILL"/>
+      <viewAttribute id="KAILQ"/>
+      <viewAttribute id="KAILS"/>
+      <viewAttribute id="KAVLL"/>
+      <viewAttribute id="KAVLQ"/>
+      <viewAttribute id="KAVLS"/>
+      <viewAttribute id="KAFLL"/>
+      <viewAttribute id="KAFLQ"/>
+      <viewAttribute id="KAFLS"/>
+      <viewAttribute id="KADLL"/>
+      <viewAttribute id="KAEIN"/>
+      <viewAttribute id="KAVEI"/>
+      <viewAttribute id="KAJIN"/>
+      <viewAttribute id="KARUE"/>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="SONUM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Union_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LVORM" source="LVORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAEDA" source="LAEDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AENAM" source="AENAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERC" source="SPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUMLM" source="CUMLM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CEINM" source="CEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="MENGES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="MENGER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMLA" source="CVMLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMUM" source="CVMUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMIN" source="CVMIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMEI" source="CVMEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMSP" source="CVMSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMRE" source="CVMRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICL" source="KZICL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICQ" source="KZICQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICE" source="KZICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICS" source="KZICS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCL" source="KZVCL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCQ" source="KZVCQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCE" source="KZVCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCS" source="KZVCS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HERKL" source="HERKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHDLL" source="CHDLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHJIN" source="CHJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHRUE" source="CHRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SGT_SCAT" source="SGT_SCAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSTAT" source="PSTAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMLME" source="UMLME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EINME" source="EINME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMLAB" source="VMLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMUML" source="VMUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMINS" source="VMINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMEIN" source="VMEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMSPE" source="VMSPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMRET" source="VMRET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILL" source="KZILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILQ" source="KZILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILE" source="KZILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILS" source="KZILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLL" source="KZVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLQ" source="KZVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLE" source="KZVLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLS" source="KZVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISKZ" source="DISKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSOBS" source="LSOBS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LMINB" source="LMINB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LBSTF" source="LBSTF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXPPG" source="EXPPG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXVER" source="EXVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KLABS" source="KLABS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KINSM" source="KINSM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KEINM" source="KEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KSPEM" source="KSPEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DLINL" source="DLINL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRCTL" source="PRCTL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKLAB" source="VKLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKUML" source="VKUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LWMKB" source="LWMKB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BSKRF" source="BSKRF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDRUE" source="MDRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDJIN" source="MDJIN"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SOBKZ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KASPR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KADLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KARUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SONUM" null="true" value=""/>
+    </input>
+    <input node="Projection_3" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LVORM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERNAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LAEDA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AENAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERC" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CUMLM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="MENGES"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMUM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMRE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="HERKL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHDLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SGT_SCAT" source="SGT_SCAT"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSTAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="UMLME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EINME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMINS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMSPE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMRET" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DISKZ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LSOBS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LMINB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LBSTF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXPPG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXVER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LGPBE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KLABS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KINSM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KSPEM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DLINL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRCTL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LWMKB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSKRF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KASPR" source="KASPR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLA" source="KAVLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVIN" source="KAVIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVSP" source="KAVSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILL" source="KAILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILQ" source="KAILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILS" source="KAILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLL" source="KAVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLQ" source="KAVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLS" source="KAVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLL" source="KAFLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLQ" source="KAFLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLS" source="KAFLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KADLL" source="KADLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAEIN" source="KAEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVEI" source="KAVEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAJIN" source="KAJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KARUE" source="KARUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SONUM" source="SONUM"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_3">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="LAEDA"/>
+      <viewAttribute id="AENAM"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="SPERC"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="CUMLM"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="CEINM"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="MENGER"/>
+      <viewAttribute id="CVMLA"/>
+      <viewAttribute id="CVMUM"/>
+      <viewAttribute id="CVMIN"/>
+      <viewAttribute id="CVMEI"/>
+      <viewAttribute id="CVMSP"/>
+      <viewAttribute id="CVMRE"/>
+      <viewAttribute id="KZICL"/>
+      <viewAttribute id="KZICQ"/>
+      <viewAttribute id="KZICE"/>
+      <viewAttribute id="KZICS"/>
+      <viewAttribute id="KZVCL"/>
+      <viewAttribute id="KZVCQ"/>
+      <viewAttribute id="KZVCE"/>
+      <viewAttribute id="KZVCS"/>
+      <viewAttribute id="HERKL"/>
+      <viewAttribute id="CHDLL"/>
+      <viewAttribute id="CHJIN"/>
+      <viewAttribute id="CHRUE"/>
+      <viewAttribute id="SGT_SCAT"/>
+      <viewAttribute id="PSTAT"/>
+      <viewAttribute id="SPERR"/>
+      <viewAttribute id="UMLME"/>
+      <viewAttribute id="EINME"/>
+      <viewAttribute id="VMLAB"/>
+      <viewAttribute id="VMUML"/>
+      <viewAttribute id="VMINS"/>
+      <viewAttribute id="VMEIN"/>
+      <viewAttribute id="VMSPE"/>
+      <viewAttribute id="VMRET"/>
+      <viewAttribute id="KZILL"/>
+      <viewAttribute id="KZILQ"/>
+      <viewAttribute id="KZILE"/>
+      <viewAttribute id="KZILS"/>
+      <viewAttribute id="KZVLL"/>
+      <viewAttribute id="KZVLQ"/>
+      <viewAttribute id="KZVLE"/>
+      <viewAttribute id="KZVLS"/>
+      <viewAttribute id="DISKZ"/>
+      <viewAttribute id="LSOBS"/>
+      <viewAttribute id="LMINB"/>
+      <viewAttribute id="LBSTF"/>
+      <viewAttribute id="EXPPG"/>
+      <viewAttribute id="EXVER"/>
+      <viewAttribute id="LGPBE"/>
+      <viewAttribute id="KLABS"/>
+      <viewAttribute id="KINSM"/>
+      <viewAttribute id="KEINM"/>
+      <viewAttribute id="KSPEM"/>
+      <viewAttribute id="DLINL"/>
+      <viewAttribute id="PRCTL"/>
+      <viewAttribute id="VKLAB"/>
+      <viewAttribute id="VKUML"/>
+      <viewAttribute id="LWMKB"/>
+      <viewAttribute id="BSKRF"/>
+      <viewAttribute id="MDRUE"/>
+      <viewAttribute id="MDJIN"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="KASPR"/>
+      <viewAttribute id="KAVLA"/>
+      <viewAttribute id="KAVIN"/>
+      <viewAttribute id="KAVSP"/>
+      <viewAttribute id="KAILL"/>
+      <viewAttribute id="KAILQ"/>
+      <viewAttribute id="KAILS"/>
+      <viewAttribute id="KAVLL"/>
+      <viewAttribute id="KAVLQ"/>
+      <viewAttribute id="KAVLS"/>
+      <viewAttribute id="KAFLL"/>
+      <viewAttribute id="KAFLQ"/>
+      <viewAttribute id="KAFLS"/>
+      <viewAttribute id="KADLL"/>
+      <viewAttribute id="KAEIN"/>
+      <viewAttribute id="KAVEI"/>
+      <viewAttribute id="KAJIN"/>
+      <viewAttribute id="KARUE"/>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="SPERS"/>
+      <viewAttribute id="SEINM"/>
+      <viewAttribute id="SVMLA"/>
+      <viewAttribute id="SVMIN"/>
+      <viewAttribute id="SVMEI"/>
+      <viewAttribute id="SVMSP"/>
+      <viewAttribute id="KZISL"/>
+      <viewAttribute id="KZISQ"/>
+      <viewAttribute id="KZISE"/>
+      <viewAttribute id="KZISS"/>
+      <viewAttribute id="KZVSL"/>
+      <viewAttribute id="KZVSQ"/>
+      <viewAttribute id="KZVSE"/>
+      <viewAttribute id="KZVSS"/>
+      <viewAttribute id="MMENG"/>
+      <viewAttribute id="AMENG"/>
+      <viewAttribute id="KODLL"/>
+      <viewAttribute id="KOJIN"/>
+      <viewAttribute id="KORUE"/>
+      <viewAttribute id="SONUM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Union_2" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LVORM" source="LVORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAEDA" source="LAEDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AENAM" source="AENAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERC" source="SPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUMLM" source="CUMLM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CEINM" source="CEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="MENGES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="MENGER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMLA" source="CVMLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMUM" source="CVMUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMIN" source="CVMIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMEI" source="CVMEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMSP" source="CVMSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMRE" source="CVMRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICL" source="KZICL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICQ" source="KZICQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICE" source="KZICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICS" source="KZICS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCL" source="KZVCL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCQ" source="KZVCQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCE" source="KZVCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCS" source="KZVCS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HERKL" source="HERKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHDLL" source="CHDLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHJIN" source="CHJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHRUE" source="CHRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SGT_SCAT" source="SGT_SCAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSTAT" source="PSTAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMLME" source="UMLME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EINME" source="EINME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMLAB" source="VMLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMUML" source="VMUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMINS" source="VMINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMEIN" source="VMEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMSPE" source="VMSPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMRET" source="VMRET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILL" source="KZILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILQ" source="KZILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILE" source="KZILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILS" source="KZILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLL" source="KZVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLQ" source="KZVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLE" source="KZVLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLS" source="KZVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISKZ" source="DISKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSOBS" source="LSOBS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LMINB" source="LMINB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LBSTF" source="LBSTF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXPPG" source="EXPPG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXVER" source="EXVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KLABS" source="KLABS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KINSM" source="KINSM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KEINM" source="KEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KSPEM" source="KSPEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DLINL" source="DLINL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRCTL" source="PRCTL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKLAB" source="VKLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKUML" source="VKUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LWMKB" source="LWMKB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BSKRF" source="BSKRF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDRUE" source="MDRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDJIN" source="MDJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KASPR" source="KASPR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLA" source="KAVLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVIN" source="KAVIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVSP" source="KAVSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILL" source="KAILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILQ" source="KAILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILS" source="KAILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLL" source="KAVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLQ" source="KAVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLS" source="KAVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLL" source="KAFLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLQ" source="KAFLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLS" source="KAFLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KADLL" source="KADLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAEIN" source="KAEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVEI" source="KAVEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAJIN" source="KAJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KARUE" source="KARUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MMENG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AMENG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KODLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KOJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KORUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SONUM" source="SONUM"/>
+    </input>
+    <input node="Projection_4" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MATNR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LGORT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHARG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LVORM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERSDA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERNAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LAEDA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AENAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LFGJA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LFMON" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERC" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGEU" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CUMLM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGEQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGES" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMUM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMRE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="HERKL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHDLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SGT_SCAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSTAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="UMLME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EINME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMINS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMSPE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMRET" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DISKZ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LSOBS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LMINB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LBSTF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXPPG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXVER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LGPBE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KLABS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KINSM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KSPEM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DLINL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRCTL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LWMKB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSKRF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SOBKZ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KASPR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KADLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KARUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERS" source="SPERS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEINM" source="SEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMLA" source="SVMLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMIN" source="SVMIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMEI" source="SVMEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMSP" source="SVMSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISL" source="KZISL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISQ" source="KZISQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISE" source="KZISE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISS" source="KZISS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSL" source="KZVSL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSQ" source="KZVSQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSE" source="KZVSE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSS" source="KZVSS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MMENG" source="MMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMENG" source="AMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KODLL" source="KODLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KOJIN" source="KOJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KORUE" source="KORUE"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SONUM" null="true" value=""/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+    <viewAttributes>
+      <viewAttribute id="SPERS"/>
+      <viewAttribute id="SEINM"/>
+      <viewAttribute id="SVMLA"/>
+      <viewAttribute id="SVMIN"/>
+      <viewAttribute id="SVMEI"/>
+      <viewAttribute id="SVMSP"/>
+      <viewAttribute id="KZISL"/>
+      <viewAttribute id="KZISQ"/>
+      <viewAttribute id="KZISE"/>
+      <viewAttribute id="KZISS"/>
+      <viewAttribute id="KZVSL"/>
+      <viewAttribute id="KZVSQ"/>
+      <viewAttribute id="KZVSE"/>
+      <viewAttribute id="KZVSS"/>
+      <viewAttribute id="MMENG"/>
+      <viewAttribute id="AMENG"/>
+      <viewAttribute id="KODLL"/>
+      <viewAttribute id="KOJIN"/>
+      <viewAttribute id="KORUE"/>
+    
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="SONUM"/>
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="AENAM"/>
+      <viewAttribute id="LAEDA"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="MENGES"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="HANA_APP.db.synonyms::MKOL">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SONUM" source="LIFNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="SLABS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="SINSM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="SSPEM"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_5">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="PSPNR"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="PRSPR"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="SONUM"/>
+      <viewAttribute id="PRVLA"/>
+      <viewAttribute id="PRVIN"/>
+      <viewAttribute id="PRVSP"/>
+      <viewAttribute id="PRILL"/>
+      <viewAttribute id="PRILQ"/>
+      <viewAttribute id="PRILS"/>
+      <viewAttribute id="PRVLL"/>
+      <viewAttribute id="PRVLQ"/>
+      <viewAttribute id="PRVLS"/>
+      <viewAttribute id="PRFLL"/>
+      <viewAttribute id="PRFLQ"/>
+      <viewAttribute id="PRFLS"/>
+      <viewAttribute id="PRDLL"/>
+      <viewAttribute id="PREIN"/>
+      <viewAttribute id="PRVEI"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="PRJIN"/>
+      <viewAttribute id="PRRUE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="HANA_APP.db.synonyms::MSPR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="PRLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="PRINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SONUM" source="PRSPE"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_4">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="LVORM"/>
+      <viewAttribute id="ERSDA"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="LAEDA"/>
+      <viewAttribute id="AENAM"/>
+      <viewAttribute id="LFGJA"/>
+      <viewAttribute id="LFMON"/>
+      <viewAttribute id="SPERC"/>
+      <viewAttribute id="MENGEU"/>
+      <viewAttribute id="CUMLM"/>
+      <viewAttribute id="MENGEQ"/>
+      <viewAttribute id="CEINM"/>
+      <viewAttribute id="MENGES"/>
+      <viewAttribute id="MENGER"/>
+      <viewAttribute id="CVMLA"/>
+      <viewAttribute id="CVMUM"/>
+      <viewAttribute id="CVMIN"/>
+      <viewAttribute id="CVMEI"/>
+      <viewAttribute id="CVMSP"/>
+      <viewAttribute id="CVMRE"/>
+      <viewAttribute id="KZICL"/>
+      <viewAttribute id="KZICQ"/>
+      <viewAttribute id="KZICE"/>
+      <viewAttribute id="KZICS"/>
+      <viewAttribute id="KZVCL"/>
+      <viewAttribute id="KZVCQ"/>
+      <viewAttribute id="KZVCE"/>
+      <viewAttribute id="KZVCS"/>
+      <viewAttribute id="HERKL"/>
+      <viewAttribute id="CHDLL"/>
+      <viewAttribute id="CHJIN"/>
+      <viewAttribute id="CHRUE"/>
+      <viewAttribute id="SGT_SCAT"/>
+      <viewAttribute id="PSTAT"/>
+      <viewAttribute id="SPERR"/>
+      <viewAttribute id="UMLME"/>
+      <viewAttribute id="EINME"/>
+      <viewAttribute id="VMLAB"/>
+      <viewAttribute id="VMUML"/>
+      <viewAttribute id="VMINS"/>
+      <viewAttribute id="VMEIN"/>
+      <viewAttribute id="VMSPE"/>
+      <viewAttribute id="VMRET"/>
+      <viewAttribute id="KZILL"/>
+      <viewAttribute id="KZILQ"/>
+      <viewAttribute id="KZILE"/>
+      <viewAttribute id="KZILS"/>
+      <viewAttribute id="KZVLL"/>
+      <viewAttribute id="KZVLQ"/>
+      <viewAttribute id="KZVLE"/>
+      <viewAttribute id="KZVLS"/>
+      <viewAttribute id="DISKZ"/>
+      <viewAttribute id="LSOBS"/>
+      <viewAttribute id="LMINB"/>
+      <viewAttribute id="LBSTF"/>
+      <viewAttribute id="EXPPG"/>
+      <viewAttribute id="EXVER"/>
+      <viewAttribute id="LGPBE"/>
+      <viewAttribute id="KLABS"/>
+      <viewAttribute id="KINSM"/>
+      <viewAttribute id="KEINM"/>
+      <viewAttribute id="KSPEM"/>
+      <viewAttribute id="DLINL"/>
+      <viewAttribute id="PRCTL"/>
+      <viewAttribute id="VKLAB"/>
+      <viewAttribute id="VKUML"/>
+      <viewAttribute id="LWMKB"/>
+      <viewAttribute id="BSKRF"/>
+      <viewAttribute id="MDRUE"/>
+      <viewAttribute id="MDJIN"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="KASPR"/>
+      <viewAttribute id="KAVLA"/>
+      <viewAttribute id="KAVIN"/>
+      <viewAttribute id="KAVSP"/>
+      <viewAttribute id="KAILL"/>
+      <viewAttribute id="KAILQ"/>
+      <viewAttribute id="KAILS"/>
+      <viewAttribute id="KAVLL"/>
+      <viewAttribute id="KAVLQ"/>
+      <viewAttribute id="KAVLS"/>
+      <viewAttribute id="KAFLL"/>
+      <viewAttribute id="KAFLQ"/>
+      <viewAttribute id="KAFLS"/>
+      <viewAttribute id="KADLL"/>
+      <viewAttribute id="KAEIN"/>
+      <viewAttribute id="KAVEI"/>
+      <viewAttribute id="KAJIN"/>
+      <viewAttribute id="KARUE"/>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="SPERS"/>
+      <viewAttribute id="SEINM"/>
+      <viewAttribute id="SVMLA"/>
+      <viewAttribute id="SVMIN"/>
+      <viewAttribute id="SVMEI"/>
+      <viewAttribute id="SVMSP"/>
+      <viewAttribute id="KZISL"/>
+      <viewAttribute id="KZISQ"/>
+      <viewAttribute id="KZISE"/>
+      <viewAttribute id="KZISS"/>
+      <viewAttribute id="KZVSL"/>
+      <viewAttribute id="KZVSQ"/>
+      <viewAttribute id="KZVSE"/>
+      <viewAttribute id="KZVSS"/>
+      <viewAttribute id="MMENG"/>
+      <viewAttribute id="AMENG"/>
+      <viewAttribute id="KODLL"/>
+      <viewAttribute id="KOJIN"/>
+      <viewAttribute id="KORUE"/>
+      <viewAttribute id="PSPNR"/>
+      <viewAttribute id="PRSPR"/>
+      <viewAttribute id="PRVLA"/>
+      <viewAttribute id="PRVIN"/>
+      <viewAttribute id="PRVSP"/>
+      <viewAttribute id="PRILL"/>
+      <viewAttribute id="PRILQ"/>
+      <viewAttribute id="PRILS"/>
+      <viewAttribute id="PRVLL"/>
+      <viewAttribute id="PRVLQ"/>
+      <viewAttribute id="PRVLS"/>
+      <viewAttribute id="PRFLL"/>
+      <viewAttribute id="PRFLQ"/>
+      <viewAttribute id="PRFLS"/>
+      <viewAttribute id="PRDLL"/>
+      <viewAttribute id="PREIN"/>
+      <viewAttribute id="PRVEI"/>
+      <viewAttribute id="PRJIN"/>
+      <viewAttribute id="PRRUE"/>
+      <viewAttribute id="SONUM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Union_3" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LVORM" source="LVORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAEDA" source="LAEDA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AENAM" source="AENAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERC" source="SPERC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUMLM" source="CUMLM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CEINM" source="CEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGES" source="MENGES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGER" source="MENGER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMLA" source="CVMLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMUM" source="CVMUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMIN" source="CVMIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMEI" source="CVMEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMSP" source="CVMSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CVMRE" source="CVMRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICL" source="KZICL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICQ" source="KZICQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICE" source="KZICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZICS" source="KZICS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCL" source="KZVCL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCQ" source="KZVCQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCE" source="KZVCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVCS" source="KZVCS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HERKL" source="HERKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHDLL" source="CHDLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHJIN" source="CHJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHRUE" source="CHRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SGT_SCAT" source="SGT_SCAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSTAT" source="PSTAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMLME" source="UMLME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EINME" source="EINME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMLAB" source="VMLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMUML" source="VMUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMINS" source="VMINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMEIN" source="VMEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMSPE" source="VMSPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VMRET" source="VMRET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILL" source="KZILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILQ" source="KZILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILE" source="KZILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZILS" source="KZILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLL" source="KZVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLQ" source="KZVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLE" source="KZVLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVLS" source="KZVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISKZ" source="DISKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSOBS" source="LSOBS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LMINB" source="LMINB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LBSTF" source="LBSTF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXPPG" source="EXPPG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXVER" source="EXVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KLABS" source="KLABS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KINSM" source="KINSM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KEINM" source="KEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KSPEM" source="KSPEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DLINL" source="DLINL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRCTL" source="PRCTL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKLAB" source="VKLAB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKUML" source="VKUML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LWMKB" source="LWMKB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BSKRF" source="BSKRF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDRUE" source="MDRUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MDJIN" source="MDJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KASPR" source="KASPR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLA" source="KAVLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVIN" source="KAVIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVSP" source="KAVSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILL" source="KAILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILQ" source="KAILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAILS" source="KAILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLL" source="KAVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLQ" source="KAVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVLS" source="KAVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLL" source="KAFLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLQ" source="KAFLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAFLS" source="KAFLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KADLL" source="KADLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAEIN" source="KAEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAVEI" source="KAVEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KAJIN" source="KAJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KARUE" source="KARUE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPERS" source="SPERS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEINM" source="SEINM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMLA" source="SVMLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMIN" source="SVMIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMEI" source="SVMEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SVMSP" source="SVMSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISL" source="KZISL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISQ" source="KZISQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISE" source="KZISE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZISS" source="KZISS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSL" source="KZVSL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSQ" source="KZVSQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSE" source="KZVSE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVSS" source="KZVSS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MMENG" source="MMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AMENG" source="AMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KODLL" source="KODLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KOJIN" source="KOJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KORUE" source="KORUE"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSPNR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRSPR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRFLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRFLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRFLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRDLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PREIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRVEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SONUM" source="SONUM"/>
+    </input>
+    <input node="Projection_5" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LVORM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERSDA" source="ERSDA"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERNAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LAEDA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AENAM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGJA" source="LFGJA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMON" source="LFMON"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERC" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEU" source="MENGEU"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CUMLM" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MENGEQ" source="MENGEQ"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGES" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMUM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CVMRE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZICS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVCS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="HERKL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHDLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CHRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SGT_SCAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSTAT" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="UMLME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EINME" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMINS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMSPE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VMRET" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DISKZ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LSOBS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LMINB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LBSTF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXPPG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EXVER" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LGPBE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KLABS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KINSM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KSPEM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="DLINL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRCTL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKLAB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKUML" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LWMKB" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSKRF" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDRUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MDJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KASPR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAILS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAFLS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KADLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAEIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAVEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KAJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KARUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPERS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SEINM" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMLA" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMEI" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SVMSP" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZISS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSQ" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KZVSS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MMENG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AMENG" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KODLL" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KOJIN" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KORUE" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSPNR" source="PSPNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRSPR" source="PRSPR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVLA" source="PRVLA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVIN" source="PRVIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVSP" source="PRVSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRILL" source="PRILL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRILQ" source="PRILQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRILS" source="PRILS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVLL" source="PRVLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVLQ" source="PRVLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVLS" source="PRVLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRFLL" source="PRFLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRFLQ" source="PRFLQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRFLS" source="PRFLS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRDLL" source="PRDLL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PREIN" source="PREIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRVEI" source="PRVEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRJIN" source="PRJIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRRUE" source="PRRUE"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SONUM" null="true" value=""/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Union_4">
+  <attributes>
+    <attribute id="MATNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="Union_4" columnName="MATNR"/>
+    </attribute>
+    <attribute id="WERKS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WERKS"/>
+      <keyMapping columnObjectName="Union_4" columnName="WERKS"/>
+    </attribute>
+    <attribute id="LGORT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LGORT"/>
+      <keyMapping columnObjectName="Union_4" columnName="LGORT"/>
+    </attribute>
+    <attribute id="CHARG" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHARG"/>
+      <keyMapping columnObjectName="Union_4" columnName="CHARG"/>
+    </attribute>
+    <attribute id="SOBKZ" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOBKZ"/>
+      <keyMapping columnObjectName="Union_4" columnName="SOBKZ"/>
+    </attribute>
+    <attribute id="MENGEU" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MENGEU"/>
+      <keyMapping columnObjectName="Union_4" columnName="MENGEU"/>
+    </attribute>
+    <attribute id="MENGEQ" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MENGEQ"/>
+      <keyMapping columnObjectName="Union_4" columnName="MENGEQ"/>
+    </attribute>
+    <attribute id="MENGES" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MENGES"/>
+      <keyMapping columnObjectName="Union_4" columnName="MENGES"/>
+    </attribute>
+    <attribute id="MENGER" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MENGER"/>
+      <keyMapping columnObjectName="Union_4" columnName="MENGER"/>
+    </attribute>
+    <attribute id="LGPBE" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LGPBE"/>
+      <keyMapping columnObjectName="Union_4" columnName="LGPBE"/>
+    </attribute>
+    <attribute id="SPERR" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPERR"/>
+      <keyMapping columnObjectName="Union_4" columnName="SPERR"/>
+    </attribute>
+    <attribute id="SPERC" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPERC"/>
+      <keyMapping columnObjectName="Union_4" columnName="SPERC"/>
+    </attribute>
+    <attribute id="SPERS" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPERS"/>
+      <keyMapping columnObjectName="Union_4" columnName="SPERS"/>
+    </attribute>
+    <attribute id="KASPR" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KASPR"/>
+      <keyMapping columnObjectName="Union_4" columnName="KASPR"/>
+    </attribute>
+    <attribute id="PRSPR" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRSPR"/>
+      <keyMapping columnObjectName="Union_4" columnName="PRSPR"/>
+    </attribute>
+  
+    <attribute id="SONUM" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SONUM"/>
+  
+      <keyMapping columnObjectName="Union_4" columnName="SONUM"/>
+  
+    </attribute>
+  
+    <attribute id="PSPNR" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PSPNR"/>
+      <keyMapping columnObjectName="Union_4" columnName="PSPNR"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="DELETEFLAG" order="16" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="13">
+        <formula>IF( &quot;MENGEU&quot;= 0 and &quot;MENGEQ&quot;= 0 and &quot;MENGES&quot;= 0 and &quot;MENGER&quot;= 0, 'YES', 'NO')  </formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="534" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="118" y="636"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="91" y="776"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="776"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="380" y="636"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Union_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="145" y="496"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Union_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="172" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="477" y="496"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_5" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="592" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Union_4" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="534" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

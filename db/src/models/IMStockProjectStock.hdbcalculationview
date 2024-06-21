@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="db.models::IMStockProjectStock" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="IMStockProjectStock"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HANA_APP.db.synonyms::MSPR">
+    <resourceUri>HANA_APP.db.synonyms::MSPR</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="HANA_APP.db.synonyms::MSPR">
+  <attributes>
+    <attribute id="MATNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="MSPR" columnName="MATNR"/>
+    </attribute>
+    <attribute id="WERKS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WERKS"/>
+      <keyMapping columnObjectName="MSPR" columnName="WERKS"/>
+    </attribute>
+    <attribute id="LGORT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LGORT"/>
+      <keyMapping columnObjectName="MSPR" columnName="LGORT"/>
+    </attribute>
+    <attribute id="CHARG" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHARG"/>
+      <keyMapping columnObjectName="MSPR" columnName="CHARG"/>
+    </attribute>
+    <attribute id="SOBKZ" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOBKZ"/>
+      <keyMapping columnObjectName="MSPR" columnName="SOBKZ"/>
+    </attribute>
+    <attribute id="PSPNR" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PSPNR"/>
+      <keyMapping columnObjectName="MSPR" columnName="PSPNR"/>
+    </attribute>
+    <attribute id="LFGJA" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFGJA"/>
+      <keyMapping columnObjectName="MSPR" columnName="LFGJA"/>
+    </attribute>
+    <attribute id="LFMON" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFMON"/>
+      <keyMapping columnObjectName="MSPR" columnName="LFMON"/>
+    </attribute>
+    <attribute id="PRSPR" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRSPR"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRSPR"/>
+    </attribute>
+    <attribute id="PRLAB" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRLAB"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRLAB"/>
+    </attribute>
+    <attribute id="PRINS" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRINS"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRINS"/>
+    </attribute>
+    <attribute id="PRSPE" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRSPE"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRSPE"/>
+    </attribute>
+    <attribute id="PRVLA" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVLA"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVLA"/>
+    </attribute>
+    <attribute id="PRVIN" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVIN"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVIN"/>
+    </attribute>
+    <attribute id="PRVSP" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVSP"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVSP"/>
+    </attribute>
+    <attribute id="PRILL" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRILL"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRILL"/>
+    </attribute>
+    <attribute id="PRILQ" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRILQ"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRILQ"/>
+    </attribute>
+    <attribute id="PRILS" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRILS"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRILS"/>
+    </attribute>
+    <attribute id="PRVLL" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVLL"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVLL"/>
+    </attribute>
+    <attribute id="PRVLQ" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVLQ"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVLQ"/>
+    </attribute>
+    <attribute id="PRVLS" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVLS"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVLS"/>
+    </attribute>
+    <attribute id="PRFLL" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRFLL"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRFLL"/>
+    </attribute>
+    <attribute id="PRFLQ" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRFLQ"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRFLQ"/>
+    </attribute>
+    <attribute id="PRFLS" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRFLS"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRFLS"/>
+    </attribute>
+    <attribute id="PRDLL" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRDLL"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRDLL"/>
+    </attribute>
+    <attribute id="PREIN" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PREIN"/>
+      <keyMapping columnObjectName="MSPR" columnName="PREIN"/>
+    </attribute>
+    <attribute id="PRVEI" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRVEI"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRVEI"/>
+    </attribute>
+    <attribute id="ERSDA" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERSDA"/>
+      <keyMapping columnObjectName="MSPR" columnName="ERSDA"/>
+    </attribute>
+    <attribute id="PRJIN" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRJIN"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRJIN"/>
+    </attribute>
+    <attribute id="PRRUE" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRRUE"/>
+      <keyMapping columnObjectName="MSPR" columnName="PRRUE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
